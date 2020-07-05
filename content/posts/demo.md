@@ -5,7 +5,7 @@ draft: false
 
 ## What is Girouette ?
 
-### Server DNS
+### DNS Server
 
 When you'r install Girouette, choice the domain extentions to redirect in localhost :
 
