@@ -1,0 +1,26 @@
+baseURL = "https://girouette.dev/"
+languageCode = "en-us"
+title = "Girouette"
+theme = "onedly"
+
+staticDir = ['static']
+
+[params]
+    # project specific params
+    description = "Custom domain name and valid https for local development."
+    project_url = "https://github.com/apoutchika/girouette"
+
+    # optionally specify where the content is
+    # mainSections = ["post"] 
+
+    # social share links to appear at the end
+    socialShare          = false
+    # Sets specific share to appear on posts (default behavior is to appear)
+    socialShareTwitter   = false
+    socialShareGoogleplus = false
+    socialShareFacebook  = false
+    socialShareReddit    = false
+    socialShareLinkedin  = false
+    socialShareStumbleupon = false
+    socialSharePinterest = false
+    socialShareEmail = false
