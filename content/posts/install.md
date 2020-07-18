@@ -5,7 +5,7 @@ draft: false
 
 > Girouette it's a DNS proxy, load balancer (compatible with traefik label) and certificate generator for working with docker for development.
 
-## Install
+## Install or Update
 
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh)"
