@@ -7,12 +7,20 @@ draft: false
 
 ## Install or Update
 
-```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh)"
-```
-
-Requirements :
+### Requirements :
 
 - Docker
-- Ports : `80`, `443`, `53`
+- Ports : `80`, `443` and `53`
 - Set you'r primary DNS server to `127.0.0.1`
+
+With curl:
+
+```sh
+$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh)"
+```
+
+With wget :
+
+```sh
+$ bash -c "$(wget https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh -O -)"
+```
