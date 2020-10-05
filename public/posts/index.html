@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+		
+		Custom domain name and valid https for local development.
+		"> 
+    
+	<meta name="author" content=" map[] ">  
+    <base href="https://girouette.dev/">
+    <title>Posts</title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+    
+    
+    
+
+    <style>
+    .navbar {
+    border-color: <no value>;
+}
+
+.content-section-a,
+footer,
+.navbar {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+.navbar a:link,
+.navbar-default .navbar-nav>li>a {
+  color: <no value>;
+}
+
+.navbar a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+  color: <no value>;
+}
+
+.content-section-b {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+body {
+  color: <no value>;
+}
+
+.header-container h1,
+.header-container h2,
+.header-container h3,
+.header-container h4 {
+  color: <no value>;
+}
+ 
+  </style>
+
+</head>
+<body>
+
+<section id="intro">
+	
+	<div class="intro-header">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+				
+					<div class="intro-message">
+						<h1>Girouette</h1>
+						<h3>Custom domain name and valid https for local development.</h3>
+						<hr class="intro-divider">
+
+						<ul class="list-inline intro-social-buttons">
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</section>
+
+<section id="main">
+
+
+
+	 
+    <div class="content-section-a">
+    
+   
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    
+                    <h2 class="section-heading"></h2>
+                    <blockquote>
+<p>Girouette it&rsquo;s a DNS proxy, load balancer (compatible with traefik label) and certificate generator for working with docker for development.</p>
+</blockquote>
+<h2 id="install-or-update">Install or Update</h2>
+<h3 id="with-curl">With curl</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h3 id="with-wget">With wget</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>wget https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh -O -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><h3 id="requirements-">Requirements :</h3>
+<ul>
+<li>Docker</li>
+<li>Ports : <code>80</code>, <code>443</code>, <code>53</code></li>
+<li>Set you&rsquo;r primary DNS server to <code>127.0.0.1</code></li>
+</ul>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+	
+    <div class="content-section-b">
+    
+   
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    
+                    <h2 class="section-heading"></h2>
+                    <h2 id="what-is-girouette-">What is Girouette ?</h2>
+<h3 id="dns-server">DNS Server</h3>
+<p>When you&rsquo;r install Girouette, choice the domain extentions to redirect in localhost :</p>
+<p><img src="/dns.jpg" alt="Dns proxy"></p>
+<p>Configure you&rsquo;r network connexion with primary DNS server <code>127.0.0.1</code></p>
+<p>Girouette use a special DNS cache : if cache is expired, it send last cache value immediately, and parallelly update cache.</p>
+<h3 id="https">HTTPS</h3>
+<p>Girouette create SSL certificates autosigned for you. Just add an authority certificate to your browser after installation, the rest is done by itself.</p>
+<p><img src="/https.jpg" alt="Https with Girouette"></p>
+<h3 id="interface">Interface</h3>
+<p>You can go to <a href="https://girouette.devel/">https://girouette.devel/</a> and see real time interface :</p>
+<ul>
+<li>List of container started with domain label</li>
+<li>Click link to open, add to favorite or switch to http / https</li>
+<li>Stop docker-compose project</li>
+<li>Clean docker (with container and image prune) / Clear DNS cache</li>
+<li>Download Root certificate</li>
+</ul>
+<p><img src="/interface.jpg" alt="interface"></p>
+
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+	 
+    <div class="content-section-a">
+    
+   
+        <div class="container">
+
+            <div class="row">
+                <div>
+                    
+                    <h2 class="section-heading"></h2>
+                    <h2 id="documentation">Documentation</h2>
+<p>You must use Label for list domain</p>
+<h4 id="with-docker-compose-">With docker-compose :</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+  <span style="color:#66d9ef">whoami</span>:
+    <span style="color:#66d9ef">image</span>: emilevauge/whoami
+    <span style="color:#66d9ef">labels</span>:
+      <span style="color:#66d9ef">girouette.domains</span>: whoami.devel:<span style="color:#ae81ff">80</span>,test.local:<span style="color:#ae81ff">80</span> <span style="color:#75715e"># List domains and port (default is 80)</span>
+</code></pre></div><h4 id="with-docker">With docker</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ docker run <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --label girouette.domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;whoami.devel:80&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  emilevauge/whoami
+</code></pre></div><h3 id="compatible-with-traefik-labels">Compatible with traefik labels</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+  <span style="color:#66d9ef">whoami</span>:
+    <span style="color:#66d9ef">image</span>: emilevauge/whoami
+    <span style="color:#66d9ef">labels</span>:
+      <span style="color:#66d9ef">traefik.frontend.rule</span>: <span style="color:#e6db74">&#39;Host:whoami.devel&#39;</span>
+      <span style="color:#66d9ef">traefik.port</span>: <span style="color:#ae81ff">80</span>
+</code></pre></div>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </div>
+
+
+</section>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" style="padding-left: 0px; width:100%">
+				<ul class="list-inline">
+					<li>
+						<a class="page-scroll" href="#intro">Up</a>
+					</li>
+					
+					
+				 </ul>
+				 <p class="copyright text-muted small" style="text-align:left;">
+                    Copyright &copy; Girouette All Rights Reserved 
+                 </p>
+			</div>
+            
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-1.11.0.js"></script>
+
+
+<script src="js/jquery.easing.min.js"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
+

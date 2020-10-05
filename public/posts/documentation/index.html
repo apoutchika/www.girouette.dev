@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="
+		Documentation You must use Label for list domain
+With docker-compose : version: &#39;3.7&#39; services: whoami: image: emilevauge/whoami labels: girouette.domains: whoami.devel:80,test.local:80 # List domains and port (default is 80) With docker $ docker run \  --label girouette.domains=&#34;whoami.devel:80&#34; \  emilevauge/whoami Compatible with traefik labels version: &#39;3.7&#39; services: whoami: image: emilevauge/whoami labels: traefik.frontend.rule: &#39;Host:whoami.devel&#39; traefik.port: 80     
+		"> 
+    
+	<meta name="author" content=" map[] ">  
+    <base href="https://girouette.dev/">
+    <title>Girouette</title>
+
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+    
+    
+    
+
+    <style>
+    .navbar {
+    border-color: <no value>;
+}
+
+.content-section-a,
+footer,
+.navbar {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+.navbar a:link,
+.navbar-default .navbar-nav>li>a {
+  color: <no value>;
+}
+
+.navbar a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+  color: <no value>;
+}
+
+.content-section-b {
+  background-color: <no value>;
+  color: <no value>;
+}
+
+body {
+  color: <no value>;
+}
+
+.header-container h1,
+.header-container h2,
+.header-container h3,
+.header-container h4 {
+  color: <no value>;
+}
+ 
+  </style>
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        
+        <div class="navbar-header page-scroll" style="margin-left: -15px;">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-right: 0px;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" style="padding-left: 0px;margin-left: 0px;" href="#intro">
+            Girouette</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+				
+				<li>
+				  <a class="page-scroll" href="https://github.com/apoutchika/girouette">
+                    Github
+                  </a>
+                </li>
+				 
+				 
+            </ul>
+        </div>
+        
+    </div>
+    
+</nav>
+
+
+<section id="services">
+   <div class="content-section-a">
+
+      <div class="container">
+
+        <div class="row">
+          <div>
+            <hr class="section-heading-spacer">
+            <div class="clearfix"></div>
+            <h2 class="section-heading"></h2>
+            <h2 id="documentation">Documentation</h2>
+<p>You must use Label for list domain</p>
+<h4 id="with-docker-compose-">With docker-compose :</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+  <span style="color:#66d9ef">whoami</span>:
+    <span style="color:#66d9ef">image</span>: emilevauge/whoami
+    <span style="color:#66d9ef">labels</span>:
+      <span style="color:#66d9ef">girouette.domains</span>: whoami.devel:<span style="color:#ae81ff">80</span>,test.local:<span style="color:#ae81ff">80</span> <span style="color:#75715e"># List domains and port (default is 80)</span>
+</code></pre></div><h4 id="with-docker">With docker</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ docker run <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --label girouette.domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;whoami.devel:80&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  emilevauge/whoami
+</code></pre></div><h3 id="compatible-with-traefik-labels">Compatible with traefik labels</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+  <span style="color:#66d9ef">whoami</span>:
+    <span style="color:#66d9ef">image</span>: emilevauge/whoami
+    <span style="color:#66d9ef">labels</span>:
+      <span style="color:#66d9ef">traefik.frontend.rule</span>: <span style="color:#e6db74">&#39;Host:whoami.devel&#39;</span>
+      <span style="color:#66d9ef">traefik.port</span>: <span style="color:#ae81ff">80</span>
+</code></pre></div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" style="padding-left: 0px; width:100%">
+				<ul class="list-inline">
+					<li>
+						<a class="page-scroll" href="#intro">Up</a>
+					</li>
+					
+					
+				 </ul>
+				 <p class="copyright text-muted small" style="text-align:left;">
+                    Copyright &copy; Girouette All Rights Reserved 
+                 </p>
+			</div>
+            
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-1.11.0.js"></script>
+
+
+<script src="js/jquery.easing.min.js"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
+

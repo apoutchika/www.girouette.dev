@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Girouette</title>
+    <link>https://girouette.dev/</link>
+    <description>Recent content on Girouette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jul 2020 11:05:20 +0200</lastBuildDate>
+    
+	<atom:link href="https://girouette.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://girouette.dev/posts/install/</link>
+      <pubDate>Sun, 05 Jul 2020 11:05:20 +0200</pubDate>
+      
+      <guid>https://girouette.dev/posts/install/</guid>
+      <description> Girouette it&amp;rsquo;s a DNS proxy, load balancer (compatible with traefik label) and certificate generator for working with docker for development.
+ Install or Update With curl bash -c &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh)&amp;#34; With wget bash -c &amp;#34;$(wget https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh -O -)&amp;#34; Requirements :  Docker Ports : 80, 443, 53 Set you&amp;rsquo;r primary DNS server to 127.0.0.1  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://girouette.dev/posts/demo/</link>
+      <pubDate>Sun, 05 Jul 2020 11:05:10 +0200</pubDate>
+      
+      <guid>https://girouette.dev/posts/demo/</guid>
+      <description>What is Girouette ? DNS Server When you&amp;rsquo;r install Girouette, choice the domain extentions to redirect in localhost :
+Configure you&amp;rsquo;r network connexion with primary DNS server 127.0.0.1
+Girouette use a special DNS cache : if cache is expired, it send last cache value immediately, and parallelly update cache.
+HTTPS Girouette create SSL certificates autosigned for you. Just add an authority certificate to your browser after installation, the rest is done by itself.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://girouette.dev/posts/documentation/</link>
+      <pubDate>Sun, 05 Jul 2020 11:05:00 +0200</pubDate>
+      
+      <guid>https://girouette.dev/posts/documentation/</guid>
+      <description>Documentation You must use Label for list domain
+With docker-compose : version: &amp;#39;3.7&amp;#39; services: whoami: image: emilevauge/whoami labels: girouette.domains: whoami.devel:80,test.local:80 # List domains and port (default is 80) With docker $ docker run \  --label girouette.domains=&amp;#34;whoami.devel:80&amp;#34; \  emilevauge/whoami Compatible with traefik labels version: &amp;#39;3.7&amp;#39; services: whoami: image: emilevauge/whoami labels: traefik.frontend.rule: &amp;#39;Host:whoami.devel&amp;#39; traefik.port: 80 </description>
+    </item>
+    
+  </channel>
+</rss>

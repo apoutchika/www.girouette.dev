@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://girouette.dev/posts/install/</loc>
+    <lastmod>2020-07-05T11:05:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/</loc>
+    <lastmod>2020-07-05T11:05:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/posts/</loc>
+    <lastmod>2020-07-05T11:05:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/posts/demo/</loc>
+    <lastmod>2020-07-05T11:05:10+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/posts/documentation/</loc>
+    <lastmod>2020-07-05T11:05:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://girouette.dev/tags/</loc>
+  </url>
+  
+</urlset>
