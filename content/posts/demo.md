@@ -13,8 +13,6 @@ When you'r install Girouette, choice the domain extentions to redirect in localh
 
 Configure you'r network connexion with primary DNS server `127.0.0.1`
 
-Girouette use a special DNS cache : if cache is expired, it send last cache value immediately, and parallelly update cache.
-
 ### HTTPS
 
 Girouette create SSL certificates autosigned for you. Just add an authority certificate to your browser after installation, the rest is done by itself.
