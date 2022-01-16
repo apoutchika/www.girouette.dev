@@ -26,7 +26,5 @@ You can go to https://girouette.devel/ and see real time interface :
 - List of container started with domain label
 - Click link to open, add to favorite or switch to http / https
 - Stop docker-compose project
-- Clean docker (with container and image prune) / Clear DNS cache
-- Download Root certificate
 
 ![interface](/interface.jpg)
