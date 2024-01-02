@@ -10,7 +10,7 @@ You must use Label for list domain
 #### With docker-compose :
 
 ```yaml
-version: '3.7'
+version: "3.7"
 
 services:
   whoami:
@@ -30,12 +30,25 @@ $ docker run \
 ### Compatible with traefik labels
 
 ```yaml
-version: '3.7'
+version: "3.7"
 
 services:
   whoami:
     image: emilevauge/whoami
     labels:
-      traefik.frontend.rule: 'Host:whoami.devel'
+      - "traefik.http.routers.whoami.rule=Host(`whoami.devel`)"
+      - "traefik.http.services.whoami.loadbalancer.server.port=80"
+```
+
+### Compatible with old traefik labels
+
+```yaml
+version: "3.7"
+
+services:
+  whoami:
+    image: emilevauge/whoami
+    labels:
+      traefik.frontend.rule: "Host:whoami.devel"
       traefik.port: 80
 ```
