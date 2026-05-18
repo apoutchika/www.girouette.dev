@@ -74,11 +74,15 @@ body {
 
 </head>
 <body>
-<div style="background:#b91c1c;color:#fff;padding:14px 0;text-align:center;position:relative;z-index:9999;font-size:15px;">
+<div id="deprecation-banner" style="background:#b91c1c;color:#fff;padding:14px 0;text-align:center;position:fixed;top:0;left:0;right:0;z-index:10000;font-size:15px;">
   <strong>&#9888;&#65039; This project is deprecated and no longer maintained.</strong>
   &nbsp;&mdash;&nbsp; Recommended alternative: <a href="https://github.com/apoutchika/caddy" style="color:#fde68a;font-weight:bold;text-decoration:underline;">apoutchika/caddy</a>
   &nbsp;&mdash;&nbsp; same concept &amp; dashboard, by the same author, built on <a href="https://caddyserver.com/" style="color:#fde68a;text-decoration:underline;">Caddy</a>.
 </div>
+<style>
+  .navbar-fixed-top { top: 51px !important; }
+  body { padding-top: 121px !important; }
+</style>
 
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
