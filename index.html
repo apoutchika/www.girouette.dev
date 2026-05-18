@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="generator" content="Hugo 0.73.0" />
+<!-- saved from url=(0026)https://www.girouette.dev/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="generator" content="Hugo 0.58.2">
 
-    <meta charset="utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="
@@ -12,21 +12,21 @@
 		"> 
     
 	<meta name="author" content=" map[] ">  
-    <base href="https://girouette.dev/">
+    <!--<base href="https://girouette.dev/">--><base href=".">
     <title>Girouette</title>
 
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
 
     
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="./assets/landing-page.css" rel="stylesheet">
 
     
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./assets/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./assets/font-awesome.min.css">
 
     
-    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="./assets/bootstrap-social.css" rel="stylesheet">
 
     
     
@@ -91,7 +91,7 @@ body {
                 <span class="icon-bar"></span>
 				<span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" style="padding-left: 0px;margin-left: 0px;" href="#intro">
+            <a class="navbar-brand page-scroll" style="padding-left: 0px;margin-left: 0px;" href="https://girouette.dev/#intro">
             Girouette</a>
         </div>
         
@@ -231,20 +231,31 @@ body {
                 <div>
                     
                     <h2 class="section-heading"></h2>
-                    <blockquote>
-<p>Girouette it&rsquo;s a DNS proxy, load balancer (compatible with traefik label) and certificate generator for working with docker for development.</p>
+                    
+
+<blockquote>
+<p>Girouette it’s a DNS proxy, load balancer (compatible with traefik label) and certificate generator for working with docker for development.</p>
 </blockquote>
+
 <h2 id="install-or-update">Install or Update</h2>
-<h3 id="with-curl">With curl</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h3 id="with-wget">With wget</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>wget https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh -O -<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</code></pre></div><h3 id="requirements-">Requirements :</h3>
+
+<h3 id="requirements">Requirements :</h3>
+
 <ul>
 <li>Docker</li>
-<li>Ports : <code>80</code>, <code>443</code>, <code>53</code></li>
-<li>Set you&rsquo;r primary DNS server to <code>127.0.0.1</code></li>
+<li>Ports : <code>80</code>, <code>443</code> and <code>53</code></li>
+<li>Set you’r primary DNS server to <code>127.0.0.1</code></li>
 </ul>
+
+<p>With curl:</p>
+
+<pre><code class="language-sh">$ bash -c "$(curl -fsSL https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh)"
+</code></pre>
+
+<p>With wget :</p>
+
+<pre><code class="language-sh">$ bash -c "$(wget https://raw.githubusercontent.com/apoutchika/proxy/master/girouette.sh -O -)"
+</code></pre>
 
                 </div>
             </div>
@@ -264,25 +275,35 @@ body {
                 <div>
                     
                     <h2 class="section-heading"></h2>
-                    <h2 id="what-is-girouette-">What is Girouette ?</h2>
+                    
+
+<h2 id="what-is-girouette">What is Girouette ?</h2>
+
 <h3 id="dns-server">DNS Server</h3>
-<p>When you&rsquo;r install Girouette, choice the domain extentions to redirect in localhost :</p>
-<p><img src="/dns.jpg" alt="Dns proxy"></p>
-<p>Configure you&rsquo;r network connexion with primary DNS server <code>127.0.0.1</code></p>
-<p>Girouette use a special DNS cache : if cache is expired, it send last cache value immediately, and parallelly update cache.</p>
+
+<p>When you’r install Girouette, choice the domain extentions to redirect in localhost :</p>
+
+<p><img src="./assets/dns.jpg" alt="Dns proxy"></p>
+
+<p>Configure you’r network connexion with primary DNS server <code>127.0.0.1</code></p>
+
 <h3 id="https">HTTPS</h3>
+
 <p>Girouette create SSL certificates autosigned for you. Just add an authority certificate to your browser after installation, the rest is done by itself.</p>
-<p><img src="/https.jpg" alt="Https with Girouette"></p>
+
+<p><img src="./assets/https.jpg" alt="Https with Girouette"></p>
+
 <h3 id="interface">Interface</h3>
+
 <p>You can go to <a href="https://girouette.devel/">https://girouette.devel/</a> and see real time interface :</p>
+
 <ul>
 <li>List of container started with domain label</li>
 <li>Click link to open, add to favorite or switch to http / https</li>
 <li>Stop docker-compose project</li>
-<li>Clean docker (with container and image prune) / Clear DNS cache</li>
-<li>Download Root certificate</li>
 </ul>
-<p><img src="/interface.jpg" alt="interface"></p>
+
+<p><img src="./assets/interface.jpg" alt="interface"></p>
 
                 </div>
             </div>
@@ -302,30 +323,42 @@ body {
                 <div>
                     
                     <h2 class="section-heading"></h2>
-                    <h2 id="documentation">Documentation</h2>
+                    
+
+<h2 id="documentation">Documentation</h2>
+
 <p>You must use Label for list domain</p>
-<h4 id="with-docker-compose-">With docker-compose :</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
 
-<span style="color:#66d9ef">services</span>:
-  <span style="color:#66d9ef">whoami</span>:
-    <span style="color:#66d9ef">image</span>: emilevauge/whoami
-    <span style="color:#66d9ef">labels</span>:
-      <span style="color:#66d9ef">girouette.domains</span>: whoami.devel:<span style="color:#ae81ff">80</span>,test.local:<span style="color:#ae81ff">80</span> <span style="color:#75715e"># List domains and port (default is 80)</span>
-</code></pre></div><h4 id="with-docker">With docker</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ docker run <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  --label girouette.domains<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;whoami.devel:80&#34;</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>  emilevauge/whoami
-</code></pre></div><h3 id="compatible-with-traefik-labels">Compatible with traefik labels</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.7&#39;</span>
+<h4 id="with-docker-compose">With docker-compose :</h4>
 
-<span style="color:#66d9ef">services</span>:
-  <span style="color:#66d9ef">whoami</span>:
-    <span style="color:#66d9ef">image</span>: emilevauge/whoami
-    <span style="color:#66d9ef">labels</span>:
-      <span style="color:#66d9ef">traefik.frontend.rule</span>: <span style="color:#e6db74">&#39;Host:whoami.devel&#39;</span>
-      <span style="color:#66d9ef">traefik.port</span>: <span style="color:#ae81ff">80</span>
-</code></pre></div>
+<pre><code class="language-yaml">version: '3.7'
+
+services:
+  whoami:
+    image: emilevauge/whoami
+    labels:
+      girouette.domains: whoami.devel:80,test.local:80 # List domains and port (default is 80)
+</code></pre>
+
+<h4 id="with-docker">With docker</h4>
+
+<pre><code class="language-sh">$ docker run \
+  --label girouette.domains="whoami.devel:80" \
+  emilevauge/whoami
+</code></pre>
+
+<h3 id="compatible-with-traefik-labels">Compatible with traefik labels</h3>
+
+<pre><code class="language-yaml">version: '3.7'
+
+services:
+  whoami:
+    image: emilevauge/whoami
+    labels:
+      traefik.frontend.rule: 'Host:whoami.devel'
+      traefik.port: 80
+</code></pre>
+
                 </div>
             </div>
 
@@ -338,7 +371,7 @@ body {
 </section>
 
 
-<section id = "social-share-section">
+<section id="social-share-section">
 
 	<div class="container">
 		<div class="row">
@@ -386,13 +419,13 @@ body {
             <div class="col-md-8" style="padding-left: 0px; width:100%">
 				<ul class="list-inline">
 					<li>
-						<a class="page-scroll" href="#intro">Up</a>
+						<a class="page-scroll" href="https://girouette.dev/#intro">Up</a>
 					</li>
 					
 					
 				 </ul>
 				 <p class="copyright text-muted small" style="text-align:left;">
-                    Copyright &copy; Girouette All Rights Reserved 
+                    Copyright © Girouette All Rights Reserved 
                  </p>
 			</div>
             
@@ -400,16 +433,17 @@ body {
     </div>
 </footer>
 
-<script src="js/jquery-1.11.0.js"></script>
+<script src="./assets/jquery-1.11.0.js"></script>
 
 
-<script src="js/jquery.easing.min.js"></script>
+<script src="./assets/jquery.easing.min.js"></script>
 
 
-<script src="js/bootstrap.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
 
 
 
-</body>
-</html>
 
+
+
+</body></html>
